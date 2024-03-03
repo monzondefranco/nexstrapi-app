@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "realtors",
+  "info": {
+    "singularName": "realtor",
+    "pluralName": "realtors",
+    "displayName": "Realtor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lastName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Email": {
+      "type": "email",
+      "required": false
+    },
+    "city": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::city.city"
+    },
+    "bio": {
+      "type": "text"
+    }
+  }
+}
